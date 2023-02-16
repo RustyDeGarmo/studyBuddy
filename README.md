@@ -1,6 +1,10 @@
-# studyBuddy
-Java application to assist in my study. It is intended to be used with a learning resource such as a book that has 
-end of section/chapter problems for the learner to practice.
+# studyOn
+Java application to assist in my study. It is intended to be used with a learning 
+resource such as a book that has end of section/chapter problems for the learner 
+to practice. 
+
+If your chapter has 20 problems available, you input 20 and the program outputs 
+four numbers between 1 and 20 inclusive.
 
 Potential upgrades:
     Add a GUI. 
@@ -11,4 +15,4 @@ Potential upgrades:
 
 Version 0.1
     Console application that takes the number of problems available as input and randomly chooses 4 numbers for the user 
-    to study
+    to study.
