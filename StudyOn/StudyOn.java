@@ -9,19 +9,56 @@ public class StudyOn {
     
     public static void main(String [] args){
 
-        String userIn = "Enter the number of problems available: ";
         Scanner input = new Scanner(System.in);
-        System.out.print(userIn);
+        System.out.print("Enter the number of problems available: ");
+        int problemsAvailable = input.nextInt();
+
+        System.out.print("Enter the number of problems you want to study: ");
         int numberOfProblems = input.nextInt();
         
-        for(int i = 0; i < 4; i++){
-            System.out.println(getRandom(numberOfProblems));
-        }
+        printProblems(problemsAvailable, numberOfProblems);
 
         input.close();
     }
 
-    public static int getRandom(int numberOfProblems) {
-        return (int)(Math.random() * numberOfProblems + 1);
+    public static void printProblems(int problemsAvailable, int numberOfProblems) {
+        //helper method to print the problems
+        int[] problems = getProblems(problemsAvailable, numberOfProblems);
+
+        for(int i = 0; i < problems.length; i++){
+            System.out.println(problems[i]);
+        }
     }
+
+    public static int[] getProblems(int problemsAvailable, int numberOfProblems){
+        //helper method that prints random problems to study based on user input
+        int[] result = new int[numberOfProblems];
+
+        for(int i = 0; i < numberOfProblems; i++){
+            int num = getRandom(problemsAvailable);
+            if(!linearSearch(result, num)){
+                result[i] = num;
+            }
+        }
+
+        return result;
+    }
+
+    public static int getRandom(int problemsAvailable) {
+        //helper method to return a random number based on user input
+        return (int)(Math.random() * problemsAvailable + 1);
+    }
+
+    public static boolean linearSearch(int[] list, int key){
+        //linear search because we're working with a small array and I don't 
+        //think it's worth sorting to use binary search
+        boolean result = false;
+
+		for(int i = 0; i < list.length; i++){
+			if(list[i] == key){
+				result = true;
+			}
+		}
+		return result;
+	}
 }
