@@ -8,7 +8,7 @@ four numbers between 1 and 20 inclusive.
 
 Potential upgrades:
     Add a GUI. 
-    Add pomodoro timer.
+    Add pomodoro timer. 
     Add database support to keep track of which problems from which chapters the user has already solved. If the user 
     revisits a previous chapter, the application should not suggest problems that have already been solved. Could 
     potentially provide a check box for the user to decide if previously solved problems should be included.
