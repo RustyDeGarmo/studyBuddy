@@ -1,11 +1,11 @@
-package StudyOn;
+package StudyBuddy;
 /*  
  *The main class for the application.  
 */
 import java.lang.Math;
 import java.util.Scanner;
 
-public class StudyOn {
+public class StudyBuddy {
     
     public static void main(String [] args){
 
