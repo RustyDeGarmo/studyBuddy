@@ -1,4 +1,4 @@
-# studyBuddy
+# Project StudyBuddy
 Java application to assist in my study. It is intended to be used with a learning 
 resource such as a book that has end of section/chapter problems for the learner 
 to practice. 
